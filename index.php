@@ -27,22 +27,16 @@ if(isset($_POST['action'])){
 <html>
 
 <head>
-
+    <title>Repositório de Fluxos - ADO</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-light bg-light">
-            <a class="navbar-brand" href="#">
-                <img src="" width="30" height="30" alt="">
-            </a>
-        </nav>
-    </header>
     <div class="container">
         <div class="row">
             <div class="col-sm-12 col-md-6 offset-md-3">
+                <h2>Repositório de Fluxos - ADO</h2>
                 <form method="POST" enctype="multipart/form-data" action="/">
 
                     <input hidden name="action" value="upload" />
