@@ -32,51 +32,81 @@ if(isset($_POST['action'])){
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
-<body>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12 col-md-6 offset-md-3">
-                <h2>Repositório de Fluxos - ADO</h2>
-                <form method="POST" enctype="multipart/form-data" action="/">
+<body class="bg-secondary">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Repositório de Fluxos - ADO</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                    <input hidden name="action" value="upload" />
-
-                    <div class="form-group">
-                        <label for="image_name">Nome para o arquivo </label>
-                        <input required class="form-control" id="image_name" type="text" name="image_name" />
-                    </div>
-
-                    <div class="form-group">
-                        <label for="image_file">Example file input</label>
-                        <input type="file" name="image_file" class="form-control-file btn btn-success" id="image_file">
-                    </div>
-
-                    <button type="submit" class="btn btn-primary">Carregar</button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Início <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Upload de Imagem</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2 outline-success" type="search" placeholder="Pesquisar" aria-label="Search">
                 </form>
             </div>
-        </div>
-        <br>
+        </nav>
+    </header>
+    <br>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 offset-md-3">
+                    <form method="POST" enctype="multipart/form-data" action="/">
+
+                        <input hidden name="action" value="upload" />
+
+                        <div class="form-group">
+                            <label class="text-white" for="image_name">Nome para o arquivo </label>
+                            <input required class="form-control" id="image_name" type="text" name="image_name" />
+                        </div>
+
+                        <div class="input-group">
+                            <div class="custom-file">
+                                <input name="image_file" type="file" class="custom-file-input" id="image_file"/>
+                                <label class="custom-file-label" for="image_file" id="label_image_file">Escolha um arquivo</label>
+                            </div>
+                        </div>
+                        <br>
+
+                        <button type="submit" class="btn btn-primary">Carregar</button>
+
+                    </form>
+                </div>
+            </div>
+            <br>
 
 
-        <?php
+            <?php
             if(isset($msg)){
         ?>
 
-        <div class="row">
-            <div class="col-sm-12 col-md-6 offset-md-3 alert alert-info">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 offset-md-3 alert alert-info">
 
-                <?php
+                    <?php
                 echo $msg;
                 ?>
 
+                </div>
             </div>
-        </div>
-        <?php
+            <?php
             }
             ?>
 
 
-    </div>
+        </div>
+    </main>
+    <script src="assets/index.js"></script>
 </body>
 
 </html>
