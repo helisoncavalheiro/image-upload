@@ -1,5 +1,5 @@
 <?php
 
-$uploaddir = "/home/helison/projetos/ado-imageupload/uploads/";
+$uploaddir = __DIR__ . "/images/";
 
 ?>

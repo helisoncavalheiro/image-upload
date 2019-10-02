@@ -1,6 +1,9 @@
 <?php
-include "config.php";
+
 function uploadImage($uploadedfile, $filename){
+
+    include "config.php";
+    
     $finalName = $filename . date('d-m-Y-H-i-s');
     if(!file_exists($uploaddir)){
         mkdir($uploaddir);
